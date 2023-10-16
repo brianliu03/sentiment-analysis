@@ -1,5 +1,12 @@
 import torch, argparse
-from preprocess import preprocess
+from datasets import load_dataset, load_metric
+from transformers import AutoTokenizer, DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
+import numpy as np
+from huggingface_hub import notebook_login
+
+
+
+
 
 # define command line arguments
 parser = argparse.ArgumentParser()
@@ -11,4 +18,75 @@ parser.add_argument("--test_samples", type=int, default=300,
                     help="Number of testing samples to use.")
 args = parser.parse_args()
 
-dataset = preprocess(args.dataset, args.train_samples, args.test_samples)
+
+
+
+
+# load dataset
+dataset = load_dataset(args.dataset)
+small_train_dataset = dataset["train"].shuffle(seed=42).select(range(args.train_samples))
+small_test_dataset = dataset["test"].shuffle(seed=42).select(range(args.test_samples))
+
+# loading pretrained DistilBERT tokenizer
+# tokenization - breaking text into smaller units (tokens)
+tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
+
+# prepare text inputs for model using map method
+def preprocess(examples): 
+    return tokenizer(examples["text"], truncation=True)
+
+tokenized_train = small_train_dataset.map(preprocess, batched=True)
+tokenized_test = small_test_dataset.map(preprocess, batched=True)
+
+# convert training samples to PyTorch tensors and concatenate them
+# with correct amount of padding
+data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
+
+
+
+
+
+model = AutoModelForSequenceClassification.from_pretrained("distilbert-base-uncased", num_labels=2)
+
+# define metrics to evaluate model, accuracy and F1 score
+def compute_metrics(eval_pred):
+    load_accuracy =  load_metric("accuracy")
+    load_f1 = load_metric("f1")
+
+    logits, labels = eval_pred
+    predictions = np.argmax(logits, axis=-1)
+    accuracy = load_accuracy.compute(predictions=predictions, references=labels)["accuracy"]
+    f1 = load_f1.compute(predictions=predictions, references=labels)["f1"]
+    return {"accuracy": accuracy, "f1": f1}
+
+
+
+
+notebook_login()
+repo_name = "hf_tutorial"
+
+training_args = TrainingArguments(
+    output_dir = repo_name,
+    learning_rate = 2e-5,
+    per_device_train_batch_size = 16,
+    per_device_eval_batch_size = 16,
+    num_train_epochs = 2,
+    weight_decay = 0.01,
+    save_strategy = "epoch",
+    push_to_hub = True,
+)
+
+trainer = Trainer(
+    model = model,
+    args = training_args,
+    train_dataset = tokenized_train,
+    eval_dataset = tokenized_test,
+    tokenizer = tokenizer,
+    data_collator = data_collator,
+    compute_metrics = compute_metrics,
+)
+
+
+
+trainer.train()
+trainer.evaluate()
