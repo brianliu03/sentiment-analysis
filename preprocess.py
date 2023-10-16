@@ -1,25 +1,21 @@
-import torch, argparse
 from datasets import load_dataset
 from transformers import AutoTokenizer
 
+def preprocess(dataset, train_samples, test_samples):
+    # load pre-trained tokenizer
+    tokenizer = AutoTokenizer.from_pretrained("distilbert-base-cased")
 
-# define command line arguments
-parser = argparse.ArgumentParser()
-parser.add_argument("--dataset", type=str, default="imdb",
-                    help="Path to repository of the dataset to use.")
-parser.add_argument("--train_samples", type=int, default=3000,
-                    help="Number of training samples to use.")
-parser.add_argument("--test_samples", type=int, default=300,
-                    help="Number of testing samples to use.")
-args = parser.parse_args()
+    # prepare text for tokenization
+    def preprocess_text(examples):
+        return tokenizer(examples["text"], truncation=True)
 
+    # load dataset
+    dataset = load_dataset(dataset)
+    train_dataset = dataset["train"].shuffle(seed=42).select(range(train_samples))
+    test_dataset = dataset["test"].shuffle(seed=42).select(range(test_samples))
 
-# load pre-trained tokenizer
-tokenizer = AutoTokenizer.from_pretrained("distilbert-base-cased")
+    # tokenize dataset
+    train_dataset = train_dataset.map(preprocess_text, batched=True)
+    test_dataset = test_dataset.map(preprocess_text, batched=True)
 
-def preprocess(examples):
-    return tokenizer(examples["text"], truncation=True)
-
-dataset = load_dataset(args.dataset)
-dataset = dataset.map(preprocess, batched=True)
-
+    return dataset
