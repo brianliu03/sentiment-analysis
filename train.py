@@ -2,6 +2,7 @@ import torch, argparse
 from datasets import load_dataset, load_metric
 from transformers import AutoTokenizer, DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
 import numpy as np
+import evaluate
 from huggingface_hub import notebook_login
 
 
@@ -10,12 +11,14 @@ from huggingface_hub import notebook_login
 
 # define command line arguments
 parser = argparse.ArgumentParser()
-parser.add_argument("--dataset", type=str, default="imdb",
+parser.add_argument("-d", "--dataset", type=str, default="imdb",
                     help="Path to repository of the dataset to use.")
-parser.add_argument("--train_samples", type=int, default=3000,
+parser.add_argument("-t", "--train_samples", type=int, default=3000,
                     help="Number of training samples to use.")
-parser.add_argument("--test_samples", type=int, default=300,
+parser.add_argument("-ts", "--test_samples", type=int, default=300,
                     help="Number of testing samples to use.")
+parser.add_argument("-tn", "--text_name", type=str, default="text",
+                    help="Name of the text column in the dataset.")
 args = parser.parse_args()
 
 
@@ -33,7 +36,7 @@ tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
 
 # prepare text inputs for model using map method
 def preprocess(examples): 
-    return tokenizer(examples["text"], truncation=True)
+    return tokenizer(examples[args.text_name], truncation=True)
 
 tokenized_train = small_train_dataset.map(preprocess, batched=True)
 tokenized_test = small_test_dataset.map(preprocess, batched=True)
@@ -50,8 +53,8 @@ model = AutoModelForSequenceClassification.from_pretrained("distilbert-base-unca
 
 # define metrics to evaluate model, accuracy and F1 score
 def compute_metrics(eval_pred):
-    load_accuracy =  load_metric("accuracy")
-    load_f1 = load_metric("f1")
+    load_accuracy =  evaluate.load("accuracy")
+    load_f1 = evaluate.load("f1")
 
     logits, labels = eval_pred
     predictions = np.argmax(logits, axis=-1)
