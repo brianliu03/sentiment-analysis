@@ -1,6 +1,6 @@
 import torch, argparse
 from datasets import load_dataset, load_metric
-from transformers import AutoTokenizer, DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
+from transformers import AutoTokenizer, DefaultDataCollator, AutoModelForSequenceClassification, TrainingArguments, Trainer
 import numpy as np
 import evaluate
 from huggingface_hub import notebook_login
@@ -36,14 +36,13 @@ tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
 
 # prepare text inputs for model using map method
 def preprocess(examples): 
-    return tokenizer(examples[args.text_name], truncation=True)
+    return tokenizer(examples[args.text_name], truncation=True, padding=True)
 
 tokenized_train = small_train_dataset.map(preprocess, batched=True)
 tokenized_test = small_test_dataset.map(preprocess, batched=True)
 
 # convert training samples to PyTorch tensors and concatenate them
-# with correct amount of padding
-data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
+data_collator = DefaultDataCollator()
 
 
 
@@ -65,11 +64,9 @@ def compute_metrics(eval_pred):
 
 
 
-notebook_login()
-repo_name = "hf_tutorial"
 
 training_args = TrainingArguments(
-    output_dir = repo_name,
+    output_dir = "hf_tutorial",
     learning_rate = 2e-5,
     per_device_train_batch_size = 16,
     per_device_eval_batch_size = 16,
