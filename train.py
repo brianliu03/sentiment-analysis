@@ -1,5 +1,5 @@
 import torch, argparse
-from datasets import load_dataset, load_metric
+from datasets import load_dataset
 from transformers import AutoTokenizer, DefaultDataCollator, AutoModelForSequenceClassification, TrainingArguments, Trainer
 import numpy as np
 import evaluate
@@ -19,6 +19,8 @@ parser.add_argument("-ts", "--test_samples", type=int, default=300,
                     help="Number of testing samples to use.")
 parser.add_argument("-tn", "--text_name", type=str, default="text",
                     help="Name of the text column in the dataset.")
+parser.add_argument("-o", "--output_dir", type=str, default="default",
+                    help="Path to output directory.")
 args = parser.parse_args()
 
 
@@ -66,7 +68,7 @@ def compute_metrics(eval_pred):
 
 
 training_args = TrainingArguments(
-    output_dir = "hf_tutorial",
+    output_dir = args.output_dir,
     learning_rate = 2e-5,
     per_device_train_batch_size = 16,
     per_device_eval_batch_size = 16,
