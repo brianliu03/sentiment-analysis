@@ -3,12 +3,13 @@ from datasets import load_dataset
 from transformers import AutoTokenizer, DefaultDataCollator, AutoModelForSequenceClassification, TrainingArguments, Trainer
 import numpy as np
 import evaluate
-from huggingface_hub import notebook_login
 
 
 
 
+print(torch.cuda.is_available())
 
+# python3 train.py -d sst2 -t 10 -ts 5 -tn sentence -o sst2
 # define command line arguments
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--dataset", type=str, default="imdb",
