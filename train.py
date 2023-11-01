@@ -1,13 +1,17 @@
 import torch, argparse
 from datasets import load_dataset
 from transformers import AutoTokenizer, DefaultDataCollator, AutoModelForSequenceClassification, TrainingArguments, Trainer
+# import torch.multiprocessing as mp
+# from torch.utils.data.distributed import DistributedSampler
+# from torch.nn.parallel import DistributedDataParallel as DDP
+# from torch.distributed import init_process_group, destroy_process_group
 import numpy as np
 import evaluate
+import os
 
 
 
 
-print(torch.cuda.is_available())
 
 # python3 train.py -d sst2 -t 10 -ts 5 -tn sentence -o sst2
 # define command line arguments
@@ -76,7 +80,6 @@ training_args = TrainingArguments(
     num_train_epochs = 2,
     weight_decay = 0.01,
     save_strategy = "epoch",
-    push_to_hub = True,
 )
 
 trainer = Trainer(
@@ -93,3 +96,8 @@ trainer = Trainer(
 
 trainer.train()
 trainer.evaluate()
+
+# save model and compute_metrics f1 and accuracy score
+trainer.save_model(args.output_dir)
+evaluate.save("accuracy", "accuracy")
+evaluate.save("f1", "f1")
