@@ -1,0 +1,57 @@
+
+<wandb.sdk.wandb_run.Run object at 0x288c2ae90>
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 557, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/fingerprint.py", line 511, in wrapper
+    out = func(dataset, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 3801, in select
+    start = next(iter(indices))
+                 ^^^^^^^^^^^^^
+TypeError: 'int' object is not iterable
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'map'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'map'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'map'
+Map: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 29.00 examples/s]
+Map: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 56.84 examples/s]
+Some weights of DistilBertForSequenceClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: ['classifier.bias', 'pre_classifier.weight', 'classifier.weight', 'pre_classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/transformers/trainer.py", line 570, in __init__
+    os.makedirs(self.args.output_dir, exist_ok=True)
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 225, in makedirs
+OSError: [Errno 45] Operation not supported: '/home/sann7944'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'trainer' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/transformers/trainer.py", line 570, in __init__
+    os.makedirs(self.args.output_dir, exist_ok=True)
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 215, in makedirs
+  File "<frozen os>", line 225, in makedirs
+OSError: [Errno 45] Operation not supported: '/home/sann7944'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: TrainingArguments.__init__() missing 1 required positional argument: 'output_dir'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/transformers/trainer.py", line 570, in __init__
+    os.makedirs(self.args.output_dir, exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+FileNotFoundError: [Errno 2] No such file or directory: ''
