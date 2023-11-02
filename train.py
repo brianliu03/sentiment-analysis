@@ -12,7 +12,7 @@ wandb.init(
 
     # set the wandb project where this run will be logged
     project="sentiment-analysis",
-    name="bach1.0",
+    name="bach",
 
     # track hyperparameters and run metadata
     config={
@@ -22,8 +22,6 @@ wandb.init(
     "epochs": 2,
     }
 )
-
-wandb.define_metric("accuracy")
 
 
 
@@ -101,6 +99,8 @@ trainer = Trainer(
 trainer.train()
 
 trainer.save_model(output_dir + "/model")
+
+trainer.evaluate()
 
 # use weights and biases
 # print log file, nicer way is weights and biases, or tensorboard
