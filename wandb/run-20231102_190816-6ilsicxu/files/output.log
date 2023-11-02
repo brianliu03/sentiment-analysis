@@ -1,0 +1,5 @@
+
+<wandb.sdk.wandb_run.Run object at 0x286e30bd0>
+Map: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1820/1820 [00:00<00:00, 20433.18 examples/s]
+Some weights of DistilBertForSequenceClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: ['pre_classifier.bias', 'classifier.bias', 'classifier.weight', 'pre_classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.

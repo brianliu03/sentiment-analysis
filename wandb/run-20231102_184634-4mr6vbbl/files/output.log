@@ -1,0 +1,98 @@
+
+<wandb.sdk.wandb_run.Run object at 0x173fd4fd0>
+Map: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 67000/67000 [00:02<00:00, 33023.23 examples/s]
+Map: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1820/1820 [00:00<00:00, 27062.04 examples/s]
+Some weights of DistilBertForSequenceClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: ['pre_classifier.weight', 'classifier.weight', 'pre_classifier.bias', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  File "<stdin>", line 1
+    logits, labels = eval_pred
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    predictions = np.argmax(logits, axis=-1)
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    accuracy = load_accuracy.compute(predictions=predictions, references=labels)["accuracy"]
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    f1 = load_f1.compute(predictions=predictions, references=labels)["f1"]
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    return {"accuracy": accuracy, "f1": f1}
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    logits, labels = eval_pred
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    predictions = np.argmax(logits, axis=-1)
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    accuracy = load_accuracy.compute(predictions=predictions, references=labels)["accuracy"]
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    f1 = load_f1.compute(predictions=predictions, references=labels)["f1"]
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    return {"accuracy": accuracy, "f1": f1}
+IndentationError: unexpected indent
+  File "<stdin>", line 3
+    load_f1 = evaluate.load("f1")
+                                 ^
+IndentationError: unindent does not match any outer indentation level
+  File "<stdin>", line 1
+    logits, labels = eval_pred
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    predictions = np.argmax(logits, axis=-1)
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    accuracy = load_accuracy.compute(predictions=predictions, references=labels)["accuracy"]
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    f1 = load_f1.compute(predictions=predictions, references=labels)["f1"]
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    return {"accuracy": accuracy, "f1": f1}
+IndentationError: unexpected indent
+  File "<stdin>", line 6
+    predictions = np.argmax(logits, axis=-1)
+                                            ^
+IndentationError: unindent does not match any outer indentation level
+  File "<stdin>", line 1
+    accuracy = load_accuracy.compute(predictions=predictions, references=labels)["accuracy"]
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    f1 = load_f1.compute(predictions=predictions, references=labels)["f1"]
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    return {"accuracy": accuracy, "f1": f1}
+IndentationError: unexpected indent
+  0%|                                                                                                                                                                   | 0/8376 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/transformers/trainer.py", line 1591, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/transformers/trainer.py", line 1870, in _inner_training_loop
+    for step, inputs in enumerate(epoch_iterator):
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/accelerate/data_loader.py", line 384, in __iter__
+    current_batch = next(dataloader_iter)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 633, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 677, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 54, in fetch
+    return self.collate_fn(data)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/transformers/data/data_collator.py", line 102, in __call__
+    return default_data_collator(features, return_tensors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/transformers/data/data_collator.py", line 70, in default_data_collator
+    return torch_default_data_collator(features)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/transformers/data/data_collator.py", line 136, in torch_default_data_collator
+    batch[k] = torch.tensor([f[k] for f in features])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: expected sequence of length 53 at dim 1 (got 56)
+                                                                                                                                                                                                 You're using a DistilBertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.

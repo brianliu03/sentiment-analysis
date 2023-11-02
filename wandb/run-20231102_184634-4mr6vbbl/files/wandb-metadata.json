@@ -1,0 +1,36 @@
+{
+    "os": "macOS-14.1-arm64-arm-64bit",
+    "python": "3.11.5",
+    "heartbeatAt": "2023-11-02T18:46:35.229975",
+    "startedAt": "2023-11-02T18:46:34.650282",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "codePathLocal": null,
+    "git": {
+        "remote": "https://github.com/brianliu03/sentiment-analysis.git",
+        "commit": "6953a497eeec33d03bfeeb8a0955172134fae0fa"
+    },
+    "email": "64610885+brianliu03@users.noreply.github.com",
+    "root": "/Users/brianliu03/Documents/Projects/sentiment-analysis",
+    "host": "Brians-MacBook-Pro.local",
+    "username": "brianliu03",
+    "executable": "/Users/brianliu03/miniconda3/envs/mlenv/bin/python3",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "disk": {
+        "/": {
+            "total": 460.4317207336426,
+            "used": 160.7312355041504
+        }
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}

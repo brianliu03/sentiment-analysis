@@ -1,0 +1,200 @@
+2023-11-02 19:06:32,425 INFO    StreamThr :3087 [internal.py:wandb_internal():86] W&B internal server running at pid: 3087, started at: 2023-11-02 19:06:32.424909
+2023-11-02 19:06:32,426 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: status
+2023-11-02 19:06:32,429 INFO    WriterThread:3087 [datastore.py:open_for_write():85] open: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/run-3wyngp5z.wandb
+2023-11-02 19:06:32,430 DEBUG   SenderThread:3087 [sender.py:send():380] send: header
+2023-11-02 19:06:32,466 DEBUG   SenderThread:3087 [sender.py:send():380] send: run
+2023-11-02 19:06:32,856 INFO    SenderThread:3087 [dir_watcher.py:__init__():211] watching files in: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files
+2023-11-02 19:06:32,856 INFO    SenderThread:3087 [sender.py:_start_run_threads():1122] run started: 3wyngp5z with start time 1698951992.425427
+2023-11-02 19:06:32,869 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: check_version
+2023-11-02 19:06:32,869 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: check_version
+2023-11-02 19:06:32,951 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: run_start
+2023-11-02 19:06:32,958 DEBUG   HandlerThread:3087 [system_info.py:__init__():32] System info init
+2023-11-02 19:06:32,958 DEBUG   HandlerThread:3087 [system_info.py:__init__():47] System info init done
+2023-11-02 19:06:32,958 INFO    HandlerThread:3087 [system_monitor.py:start():194] Starting system monitor
+2023-11-02 19:06:32,958 INFO    SystemMonitor:3087 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-11-02 19:06:32,958 INFO    HandlerThread:3087 [system_monitor.py:probe():214] Collecting system info
+2023-11-02 19:06:32,959 DEBUG   HandlerThread:3087 [system_info.py:probe():196] Probing system
+2023-11-02 19:06:32,959 INFO    SystemMonitor:3087 [interfaces.py:start():190] Started cpu monitoring
+2023-11-02 19:06:32,959 INFO    SystemMonitor:3087 [interfaces.py:start():190] Started disk monitoring
+2023-11-02 19:06:32,961 INFO    SystemMonitor:3087 [interfaces.py:start():190] Started gpuapple monitoring
+2023-11-02 19:06:32,962 INFO    SystemMonitor:3087 [interfaces.py:start():190] Started memory monitoring
+2023-11-02 19:06:32,963 INFO    SystemMonitor:3087 [interfaces.py:start():190] Started network monitoring
+2023-11-02 19:06:32,967 DEBUG   HandlerThread:3087 [system_info.py:_probe_git():181] Probing git
+2023-11-02 19:06:32,995 DEBUG   HandlerThread:3087 [system_info.py:_probe_git():189] Probing git done
+2023-11-02 19:06:32,995 DEBUG   HandlerThread:3087 [system_info.py:probe():244] Probing system done
+2023-11-02 19:06:32,996 DEBUG   HandlerThread:3087 [system_monitor.py:probe():223] {'os': 'macOS-14.1-arm64-arm-64bit', 'python': '3.11.5', 'heartbeatAt': '2023-11-02T19:06:32.959159', 'startedAt': '2023-11-02T19:06:32.412920', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '<python with no main file>', 'codePathLocal': None, 'git': {'remote': 'https://github.com/brianliu03/sentiment-analysis.git', 'commit': '6953a497eeec33d03bfeeb8a0955172134fae0fa'}, 'email': '64610885+brianliu03@users.noreply.github.com', 'root': '/Users/brianliu03/Documents/Projects/sentiment-analysis', 'host': 'Brians-MacBook-Pro.local', 'username': 'brianliu03', 'executable': '/Users/brianliu03/miniconda3/envs/mlenv/bin/python3', 'cpu_count': 8, 'cpu_count_logical': 8, 'disk': {'/': {'total': 460.4317207336426, 'used': 160.76740646362305}}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2023-11-02 19:06:32,996 INFO    HandlerThread:3087 [system_monitor.py:probe():224] Finished collecting system info
+2023-11-02 19:06:32,996 INFO    HandlerThread:3087 [system_monitor.py:probe():227] Publishing system info
+2023-11-02 19:06:32,996 DEBUG   HandlerThread:3087 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-02 19:06:32,996 DEBUG   HandlerThread:3087 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-02 19:06:32,996 DEBUG   HandlerThread:3087 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-11-02 19:06:33,862 INFO    Thread-12 :3087 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/requirements.txt
+2023-11-02 19:06:33,862 INFO    Thread-12 :3087 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/conda-environment.yaml
+2023-11-02 19:06:34,505 DEBUG   HandlerThread:3087 [system_info.py:_save_conda():87] Saving conda packages done
+2023-11-02 19:06:34,506 INFO    HandlerThread:3087 [system_monitor.py:probe():229] Finished publishing system info
+2023-11-02 19:06:34,508 DEBUG   SenderThread:3087 [sender.py:send():380] send: files
+2023-11-02 19:06:34,508 INFO    SenderThread:3087 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-11-02 19:06:34,511 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-02 19:06:34,512 DEBUG   SenderThread:3087 [sender.py:send():380] send: telemetry
+2023-11-02 19:06:34,512 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: stop_status
+2023-11-02 19:06:34,512 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-02 19:06:34,867 INFO    Thread-12 :3087 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/conda-environment.yaml
+2023-11-02 19:06:34,867 INFO    Thread-12 :3087 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/output.log
+2023-11-02 19:06:34,867 INFO    Thread-12 :3087 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/wandb-metadata.json
+2023-11-02 19:06:35,081 INFO    wandb-upload_0:3087 [upload_job.py:push():131] Uploaded file /var/folders/d_/sps2vdyj681gtpbdtmdff5700000gp/T/tmpio4xt48fwandb/oerumirb-wandb-metadata.json
+2023-11-02 19:06:36,874 INFO    Thread-12 :3087 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/output.log
+2023-11-02 19:06:37,675 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 19:06:42,691 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 19:06:47,712 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 19:06:49,518 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-02 19:06:49,519 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-02 19:06:49,520 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: stop_status
+2023-11-02 19:06:52,745 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 19:06:57,766 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 19:07:02,988 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 19:07:04,002 INFO    Thread-12 :3087 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/output.log
+2023-11-02 19:07:04,002 INFO    Thread-12 :3087 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/config.yaml
+2023-11-02 19:07:04,518 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-02 19:07:04,519 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: stop_status
+2023-11-02 19:07:04,521 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-02 19:07:06,013 INFO    Thread-12 :3087 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/output.log
+2023-11-02 19:07:08,697 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 19:07:13,718 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 19:07:15,573 DEBUG   SenderThread:3087 [sender.py:send():380] send: exit
+2023-11-02 19:07:15,573 INFO    SenderThread:3087 [sender.py:send_exit():585] handling exit code: 1
+2023-11-02 19:07:15,573 INFO    SenderThread:3087 [sender.py:send_exit():587] handling runtime: 42
+2023-11-02 19:07:15,575 INFO    SenderThread:3087 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-02 19:07:15,575 INFO    SenderThread:3087 [sender.py:send_exit():593] send defer
+2023-11-02 19:07:15,576 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 19:07:15,576 INFO    HandlerThread:3087 [handler.py:handle_request_defer():172] handle defer: 0
+2023-11-02 19:07:15,576 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: defer
+2023-11-02 19:07:15,576 INFO    SenderThread:3087 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-11-02 19:07:15,576 INFO    SenderThread:3087 [sender.py:transition_state():613] send defer: 1
+2023-11-02 19:07:15,576 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 19:07:15,576 INFO    HandlerThread:3087 [handler.py:handle_request_defer():172] handle defer: 1
+2023-11-02 19:07:15,577 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: defer
+2023-11-02 19:07:15,577 INFO    SenderThread:3087 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-11-02 19:07:15,577 INFO    SenderThread:3087 [sender.py:transition_state():613] send defer: 2
+2023-11-02 19:07:15,577 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 19:07:15,577 INFO    HandlerThread:3087 [handler.py:handle_request_defer():172] handle defer: 2
+2023-11-02 19:07:15,577 INFO    HandlerThread:3087 [system_monitor.py:finish():203] Stopping system monitor
+2023-11-02 19:07:15,577 INFO    HandlerThread:3087 [interfaces.py:finish():202] Joined cpu monitor
+2023-11-02 19:07:15,577 DEBUG   SystemMonitor:3087 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-11-02 19:07:15,577 DEBUG   SystemMonitor:3087 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-11-02 19:07:15,577 DEBUG   SystemMonitor:3087 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-11-02 19:07:15,577 INFO    HandlerThread:3087 [interfaces.py:finish():202] Joined disk monitor
+2023-11-02 19:07:16,055 INFO    Thread-12 :3087 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/wandb-summary.json
+2023-11-02 19:07:16,175 INFO    HandlerThread:3087 [interfaces.py:finish():202] Joined gpuapple monitor
+2023-11-02 19:07:16,175 INFO    HandlerThread:3087 [interfaces.py:finish():202] Joined memory monitor
+2023-11-02 19:07:16,175 INFO    HandlerThread:3087 [interfaces.py:finish():202] Joined network monitor
+2023-11-02 19:07:16,175 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: defer
+2023-11-02 19:07:16,175 INFO    SenderThread:3087 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-11-02 19:07:16,175 INFO    SenderThread:3087 [sender.py:transition_state():613] send defer: 3
+2023-11-02 19:07:16,175 DEBUG   SenderThread:3087 [sender.py:send():380] send: telemetry
+2023-11-02 19:07:16,175 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 19:07:16,175 DEBUG   SenderThread:3087 [sender.py:send():380] send: stats
+2023-11-02 19:07:16,175 INFO    HandlerThread:3087 [handler.py:handle_request_defer():172] handle defer: 3
+2023-11-02 19:07:16,176 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: defer
+2023-11-02 19:07:16,176 INFO    SenderThread:3087 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-11-02 19:07:16,176 INFO    SenderThread:3087 [sender.py:transition_state():613] send defer: 4
+2023-11-02 19:07:16,176 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 19:07:16,176 INFO    HandlerThread:3087 [handler.py:handle_request_defer():172] handle defer: 4
+2023-11-02 19:07:16,176 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: defer
+2023-11-02 19:07:16,176 INFO    SenderThread:3087 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-11-02 19:07:16,176 INFO    SenderThread:3087 [sender.py:transition_state():613] send defer: 5
+2023-11-02 19:07:16,176 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 19:07:16,176 INFO    HandlerThread:3087 [handler.py:handle_request_defer():172] handle defer: 5
+2023-11-02 19:07:16,176 DEBUG   SenderThread:3087 [sender.py:send():380] send: summary
+2023-11-02 19:07:16,177 INFO    SenderThread:3087 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-02 19:07:16,177 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: defer
+2023-11-02 19:07:16,177 INFO    SenderThread:3087 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-11-02 19:07:16,177 INFO    SenderThread:3087 [sender.py:transition_state():613] send defer: 6
+2023-11-02 19:07:16,177 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 19:07:16,177 INFO    HandlerThread:3087 [handler.py:handle_request_defer():172] handle defer: 6
+2023-11-02 19:07:16,177 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: defer
+2023-11-02 19:07:16,177 INFO    SenderThread:3087 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-11-02 19:07:16,179 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 19:07:16,379 INFO    SenderThread:3087 [sender.py:transition_state():613] send defer: 7
+2023-11-02 19:07:16,380 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 19:07:16,380 INFO    HandlerThread:3087 [handler.py:handle_request_defer():172] handle defer: 7
+2023-11-02 19:07:16,380 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: defer
+2023-11-02 19:07:16,380 INFO    SenderThread:3087 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-11-02 19:07:16,578 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-02 19:07:17,061 INFO    Thread-12 :3087 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/config.yaml
+2023-11-02 19:07:17,061 INFO    Thread-12 :3087 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/wandb-summary.json
+2023-11-02 19:07:18,022 INFO    SenderThread:3087 [sender.py:transition_state():613] send defer: 8
+2023-11-02 19:07:18,023 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: poll_exit
+2023-11-02 19:07:18,023 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 19:07:18,023 INFO    HandlerThread:3087 [handler.py:handle_request_defer():172] handle defer: 8
+2023-11-02 19:07:18,024 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: defer
+2023-11-02 19:07:18,024 INFO    SenderThread:3087 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-11-02 19:07:18,024 INFO    SenderThread:3087 [job_builder.py:build():281] Attempting to build job artifact
+2023-11-02 19:07:18,025 INFO    SenderThread:3087 [job_builder.py:_get_source_type():393] is repo sourced job
+2023-11-02 19:07:18,025 INFO    SenderThread:3087 [sender.py:transition_state():613] send defer: 9
+2023-11-02 19:07:18,025 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 19:07:18,025 INFO    HandlerThread:3087 [handler.py:handle_request_defer():172] handle defer: 9
+2023-11-02 19:07:18,025 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: defer
+2023-11-02 19:07:18,025 INFO    SenderThread:3087 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-11-02 19:07:18,025 INFO    SenderThread:3087 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-11-02 19:07:18,062 INFO    Thread-12 :3087 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/output.log
+2023-11-02 19:07:18,063 INFO    SenderThread:3087 [dir_watcher.py:finish():388] scan: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files
+2023-11-02 19:07:18,063 INFO    SenderThread:3087 [dir_watcher.py:finish():402] scan save: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/requirements.txt requirements.txt
+2023-11-02 19:07:18,063 INFO    SenderThread:3087 [dir_watcher.py:finish():402] scan save: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/output.log output.log
+2023-11-02 19:07:18,063 INFO    SenderThread:3087 [dir_watcher.py:finish():402] scan save: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/config.yaml config.yaml
+2023-11-02 19:07:18,065 INFO    SenderThread:3087 [dir_watcher.py:finish():402] scan save: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/wandb-summary.json wandb-summary.json
+2023-11-02 19:07:18,066 INFO    SenderThread:3087 [dir_watcher.py:finish():402] scan save: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/conda-environment.yaml conda-environment.yaml
+2023-11-02 19:07:18,067 INFO    SenderThread:3087 [dir_watcher.py:finish():402] scan save: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/wandb-metadata.json wandb-metadata.json
+2023-11-02 19:07:18,067 INFO    SenderThread:3087 [sender.py:transition_state():613] send defer: 10
+2023-11-02 19:07:18,068 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 19:07:18,068 INFO    HandlerThread:3087 [handler.py:handle_request_defer():172] handle defer: 10
+2023-11-02 19:07:18,068 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: defer
+2023-11-02 19:07:18,068 INFO    SenderThread:3087 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-11-02 19:07:18,068 INFO    SenderThread:3087 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-02 19:07:18,392 INFO    wandb-upload_0:3087 [upload_job.py:push():131] Uploaded file /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/requirements.txt
+2023-11-02 19:07:18,463 INFO    wandb-upload_1:3087 [upload_job.py:push():131] Uploaded file /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/output.log
+2023-11-02 19:07:18,468 INFO    wandb-upload_4:3087 [upload_job.py:push():131] Uploaded file /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/conda-environment.yaml
+2023-11-02 19:07:18,480 INFO    wandb-upload_3:3087 [upload_job.py:push():131] Uploaded file /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/wandb-summary.json
+2023-11-02 19:07:18,484 INFO    wandb-upload_2:3087 [upload_job.py:push():131] Uploaded file /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/files/config.yaml
+2023-11-02 19:07:18,689 INFO    Thread-11 (_thread_body):3087 [sender.py:transition_state():613] send defer: 11
+2023-11-02 19:07:18,690 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 19:07:18,690 INFO    HandlerThread:3087 [handler.py:handle_request_defer():172] handle defer: 11
+2023-11-02 19:07:18,691 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: defer
+2023-11-02 19:07:18,691 INFO    SenderThread:3087 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-11-02 19:07:18,691 INFO    SenderThread:3087 [file_pusher.py:join():181] waiting for file pusher
+2023-11-02 19:07:18,691 INFO    SenderThread:3087 [sender.py:transition_state():613] send defer: 12
+2023-11-02 19:07:18,691 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 19:07:18,691 INFO    HandlerThread:3087 [handler.py:handle_request_defer():172] handle defer: 12
+2023-11-02 19:07:18,691 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: defer
+2023-11-02 19:07:18,692 INFO    SenderThread:3087 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-11-02 19:07:18,692 INFO    SenderThread:3087 [file_stream.py:finish():595] file stream finish called
+2023-11-02 19:07:18,842 INFO    SenderThread:3087 [file_stream.py:finish():599] file stream finish is done
+2023-11-02 19:07:18,843 INFO    SenderThread:3087 [sender.py:transition_state():613] send defer: 13
+2023-11-02 19:07:18,843 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 19:07:18,843 INFO    HandlerThread:3087 [handler.py:handle_request_defer():172] handle defer: 13
+2023-11-02 19:07:18,844 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: defer
+2023-11-02 19:07:18,844 INFO    SenderThread:3087 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-11-02 19:07:18,844 INFO    SenderThread:3087 [sender.py:transition_state():613] send defer: 14
+2023-11-02 19:07:18,845 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 19:07:18,845 DEBUG   SenderThread:3087 [sender.py:send():380] send: final
+2023-11-02 19:07:18,845 INFO    HandlerThread:3087 [handler.py:handle_request_defer():172] handle defer: 14
+2023-11-02 19:07:18,846 DEBUG   SenderThread:3087 [sender.py:send():380] send: footer
+2023-11-02 19:07:18,846 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: defer
+2023-11-02 19:07:18,846 INFO    SenderThread:3087 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-11-02 19:07:18,847 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-02 19:07:18,847 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: poll_exit
+2023-11-02 19:07:18,848 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: server_info
+2023-11-02 19:07:18,848 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: server_info
+2023-11-02 19:07:18,850 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: get_summary
+2023-11-02 19:07:18,851 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: sampled_history
+2023-11-02 19:07:18,851 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-02 19:07:18,852 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: job_info
+2023-11-02 19:07:18,986 DEBUG   SenderThread:3087 [sender.py:send_request():407] send_request: job_info
+2023-11-02 19:07:18,986 INFO    MainThread:3087 [wandb_run.py:_footer_history_summary_info():3599] rendering history
+2023-11-02 19:07:18,987 INFO    MainThread:3087 [wandb_run.py:_footer_history_summary_info():3631] rendering summary
+2023-11-02 19:07:18,987 INFO    MainThread:3087 [wandb_run.py:_footer_sync_info():3558] logging synced files
+2023-11-02 19:07:18,988 DEBUG   HandlerThread:3087 [handler.py:handle_request():146] handle_request: shutdown
+2023-11-02 19:07:18,988 INFO    HandlerThread:3087 [handler.py:finish():866] shutting down handler
+2023-11-02 19:07:19,858 INFO    WriterThread:3087 [datastore.py:close():294] close: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_190632-3wyngp5z/run-3wyngp5z.wandb
+2023-11-02 19:07:19,989 INFO    SenderThread:3087 [sender.py:finish():1534] shutting down sender
+2023-11-02 19:07:19,989 INFO    SenderThread:3087 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-02 19:07:19,989 INFO    SenderThread:3087 [file_pusher.py:join():181] waiting for file pusher

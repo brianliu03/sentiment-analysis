@@ -1,0 +1,135 @@
+
+<wandb.sdk.wandb_run.Run object at 0x28d5d4f10>
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 2129, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 1815, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 1446, in dataset_module_factory
+    ).get_module()
+      ^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 865, in get_module
+    module_name, default_builder_kwargs = infer_module_for_data_files(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 516, in infer_module_for_data_files
+    raise FileNotFoundError(f"No (supported) data files or dataset script found{path}")
+FileNotFoundError: No (supported) data files or dataset script found in sst2.
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'dataset' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'dataset' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'small_train_dataset' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'small_test_dataset' is not defined
+Some weights of DistilBertForSequenceClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: ['classifier.bias', 'pre_classifier.weight', 'classifier.weight', 'pre_classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  File "<stdin>", line 1
+    logits, labels = eval_pred
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    predictions = np.argmax(logits, axis=-1)
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    accuracy = load_accuracy.compute(predictions=predictions, references=labels)["accuracy"]
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    f1 = load_f1.compute(predictions=predictions, references=labels)["f1"]
+IndentationError: unexpected indent
+  File "<stdin>", line 1
+    return {"accuracy": accuracy, "f1": f1}
+IndentationError: unexpected indent
+  File "<stdin>", line 7
+    weight_decay = 0.0    weight_decay = 0.0    weight_decay = 0.0    weight_decay = 0.0mo    weight_decay = 0.0    weight_decay = 0.0    weight_decay = 0in,    weight_decay = 0.0    weight_decay = 0.0    weight_decay = 0.  data_collator = data_collator,
+                   ^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+  File "<stdin>", line 1
+    compute_    compute_    compute_
+IndentationError: unexpected indent
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 2129, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 1815, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 1446, in dataset_module_factory
+    ).get_module()
+      ^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 865, in get_module
+    module_name, default_builder_kwargs = infer_module_for_data_files(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 516, in infer_module_for_data_files
+    raise FileNotFoundError(f"No (supported) data files or dataset script found{path}")
+FileNotFoundError: No (supported) data files or dataset script found in sst2.
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'dataset' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'dataset' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 2129, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 1815, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 1446, in dataset_module_factory
+    ).get_module()
+      ^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 865, in get_module
+    module_name, default_builder_kwargs = infer_module_for_data_files(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 516, in infer_module_for_data_files
+    raise FileNotFoundError(f"No (supported) data files or dataset script found{path}")
+FileNotFoundError: No (supported) data files or dataset script found in sst2.
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'dataset' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'dataset' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 2129, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 1815, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 1446, in dataset_module_factory
+    ).get_module()
+      ^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 865, in get_module
+    module_name, default_builder_kwargs = infer_module_for_data_files(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 516, in infer_module_for_data_files
+    raise FileNotFoundError(f"No (supported) data files or dataset script found{path}")
+FileNotFoundError: No (supported) data files or dataset script found in sst2.
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 2129, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 1815, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 1446, in dataset_module_factory
+    ).get_module()
+      ^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 865, in get_module
+    module_name, default_builder_kwargs = infer_module_for_data_files(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianliu03/miniconda3/envs/mlenv/lib/python3.11/site-packages/datasets/load.py", line 516, in infer_module_for_data_files
+    raise FileNotFoundError(f"No (supported) data files or dataset script found{path}")
+FileNotFoundError: No (supported) data files or dataset script found in sst2.

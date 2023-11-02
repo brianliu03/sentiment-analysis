@@ -2,7 +2,7 @@ import torch, evaluate, wandb
 import numpy as np
 
 from datasets import load_dataset
-from transformers import AutoTokenizer, DefaultDataCollator, AutoModelForSequenceClassification, TrainingArguments, Trainer
+from transformers import AutoTokenizer, DataCollatorWithPadding, AutoModelForSequenceClassification, TrainingArguments, Trainer
 
 
 
@@ -55,7 +55,7 @@ tokenized_train = small_train_dataset.map(preprocess, batched=True)
 tokenized_test = small_test_dataset.map(preprocess, batched=True)
 
 # convert training samples to PyTorch tensors and concatenate them
-data_collator = DefaultDataCollator()
+data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 
 
 
