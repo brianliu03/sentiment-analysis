@@ -31,7 +31,7 @@ wandb.define_metric("accuracy")
 # python3 train.py -d sst2 -t 10 -ts 5 -tn sentence -o sst2
 dataset_name = "sst2"
 text_name = "sentence"
-output_dir = "sst2"
+output_dir = "/home/sann7944/pnpl/sentiment-analysis/sst2"
 
 
 
@@ -98,8 +98,9 @@ trainer = Trainer(
 )
 
 
-
 trainer.train()
+
+trainer.save_model
 
 # use weights and biases
 # print log file, nicer way is weights and biases, or tensorboard
