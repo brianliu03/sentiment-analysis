@@ -23,13 +23,13 @@ wandb.init(
     }
 )
 
+wandb.define_metric("accuracy")
+
 
 
 
 # python3 train.py -d sst2 -t 10 -ts 5 -tn sentence -o sst2
 dataset_name = "sst2"
-train_samples = 67000
-test_samples = 1820
 text_name = "sentence"
 output_dir = "sst2"
 
@@ -40,8 +40,8 @@ output_dir = "sst2"
 
 # load dataset
 dataset = load_dataset(dataset_name)
-small_train_dataset = dataset["train"].shuffle(seed=45).select(range(train_samples))
-small_test_dataset = dataset["test"].shuffle(seed=45).select(range(test_samples))
+small_train_dataset = dataset["train"].shuffle(seed=45)
+small_test_dataset = dataset["test"].shuffle(seed=45)
 
 # loading pretrained DistilBERT tokenizer
 # tokenization - breaking text into smaller units (tokens)
@@ -67,7 +67,6 @@ model = AutoModelForSequenceClassification.from_pretrained("distilbert-base-unca
 def compute_metrics(eval_pred):
     load_accuracy =  evaluate.load("accuracy")
     load_f1 = evaluate.load("f1")
-
     logits, labels = eval_pred
     predictions = np.argmax(logits, axis=-1)
     accuracy = load_accuracy.compute(predictions=predictions, references=labels)["accuracy"]
