@@ -100,7 +100,7 @@ trainer = Trainer(
 
 trainer.train()
 
-trainer.save_model
+trainer.save_model(output_dir + "/model")
 
 # use weights and biases
 # print log file, nicer way is weights and biases, or tensorboard
