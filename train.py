@@ -38,8 +38,8 @@ output_dir = "/home/sann7944/pnpl/sentiment-analysis/sst2"
 
 # load dataset
 dataset = load_dataset(dataset_name)
-small_train_dataset = dataset["train"].shuffle(seed=45).select(range(10))
-small_test_dataset = dataset["test"].shuffle(seed=45).select(range(5))
+small_train_dataset = dataset["train"].shuffle(seed=45)
+small_test_dataset = dataset["validation"].shuffle(seed=45)
 
 # loading pretrained DistilBERT tokenizer
 # tokenization - breaking text into smaller units (tokens)

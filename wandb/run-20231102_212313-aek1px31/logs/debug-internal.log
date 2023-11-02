@@ -1,0 +1,58 @@
+2023-11-02 21:23:13,030 INFO    StreamThr :13463 [internal.py:wandb_internal():86] W&B internal server running at pid: 13463, started at: 2023-11-02 21:23:13.029220
+2023-11-02 21:23:13,031 DEBUG   HandlerThread:13463 [handler.py:handle_request():146] handle_request: status
+2023-11-02 21:23:13,038 INFO    WriterThread:13463 [datastore.py:open_for_write():85] open: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_212313-aek1px31/run-aek1px31.wandb
+2023-11-02 21:23:13,039 DEBUG   SenderThread:13463 [sender.py:send():380] send: header
+2023-11-02 21:23:13,088 DEBUG   SenderThread:13463 [sender.py:send():380] send: run
+2023-11-02 21:23:13,486 INFO    SenderThread:13463 [dir_watcher.py:__init__():211] watching files in: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_212313-aek1px31/files
+2023-11-02 21:23:13,486 INFO    SenderThread:13463 [sender.py:_start_run_threads():1122] run started: aek1px31 with start time 1698960193.030526
+2023-11-02 21:23:13,495 DEBUG   HandlerThread:13463 [handler.py:handle_request():146] handle_request: check_version
+2023-11-02 21:23:13,495 DEBUG   SenderThread:13463 [sender.py:send_request():407] send_request: check_version
+2023-11-02 21:23:13,590 DEBUG   HandlerThread:13463 [handler.py:handle_request():146] handle_request: run_start
+2023-11-02 21:23:13,597 DEBUG   HandlerThread:13463 [system_info.py:__init__():32] System info init
+2023-11-02 21:23:13,597 DEBUG   HandlerThread:13463 [system_info.py:__init__():47] System info init done
+2023-11-02 21:23:13,597 INFO    HandlerThread:13463 [system_monitor.py:start():194] Starting system monitor
+2023-11-02 21:23:13,597 INFO    SystemMonitor:13463 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-11-02 21:23:13,597 INFO    HandlerThread:13463 [system_monitor.py:probe():214] Collecting system info
+2023-11-02 21:23:13,598 DEBUG   HandlerThread:13463 [system_info.py:probe():196] Probing system
+2023-11-02 21:23:13,598 INFO    SystemMonitor:13463 [interfaces.py:start():190] Started cpu monitoring
+2023-11-02 21:23:13,598 INFO    SystemMonitor:13463 [interfaces.py:start():190] Started disk monitoring
+2023-11-02 21:23:13,601 INFO    SystemMonitor:13463 [interfaces.py:start():190] Started gpuapple monitoring
+2023-11-02 21:23:13,602 INFO    SystemMonitor:13463 [interfaces.py:start():190] Started memory monitoring
+2023-11-02 21:23:13,603 INFO    SystemMonitor:13463 [interfaces.py:start():190] Started network monitoring
+2023-11-02 21:23:13,608 DEBUG   HandlerThread:13463 [system_info.py:_probe_git():181] Probing git
+2023-11-02 21:23:13,637 DEBUG   HandlerThread:13463 [system_info.py:_probe_git():189] Probing git done
+2023-11-02 21:23:13,637 DEBUG   HandlerThread:13463 [system_info.py:probe():244] Probing system done
+2023-11-02 21:23:13,637 DEBUG   HandlerThread:13463 [system_monitor.py:probe():223] {'os': 'macOS-14.1-arm64-arm-64bit', 'python': '3.11.5', 'heartbeatAt': '2023-11-02T21:23:13.598624', 'startedAt': '2023-11-02T21:23:13.012333', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '<python with no main file>', 'codePathLocal': None, 'git': {'remote': 'https://github.com/brianliu03/sentiment-analysis.git', 'commit': '280571d7d1f8fdfcb2e36737d4663ca459d8fc67'}, 'email': '64610885+brianliu03@users.noreply.github.com', 'root': '/Users/brianliu03/Documents/Projects/sentiment-analysis', 'host': 'Brians-MacBook-Pro.local', 'username': 'brianliu03', 'executable': '/Users/brianliu03/miniconda3/envs/mlenv/bin/python', 'cpu_count': 8, 'cpu_count_logical': 8, 'disk': {'/': {'total': 460.4317207336426, 'used': 160.81091690063477}}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2023-11-02 21:23:13,637 INFO    HandlerThread:13463 [system_monitor.py:probe():224] Finished collecting system info
+2023-11-02 21:23:13,637 INFO    HandlerThread:13463 [system_monitor.py:probe():227] Publishing system info
+2023-11-02 21:23:13,637 DEBUG   HandlerThread:13463 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-02 21:23:13,637 DEBUG   HandlerThread:13463 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-02 21:23:13,637 DEBUG   HandlerThread:13463 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-11-02 21:23:14,492 INFO    Thread-12 :13463 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_212313-aek1px31/files/requirements.txt
+2023-11-02 21:23:14,492 INFO    Thread-12 :13463 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_212313-aek1px31/files/conda-environment.yaml
+2023-11-02 21:23:15,256 DEBUG   HandlerThread:13463 [system_info.py:_save_conda():87] Saving conda packages done
+2023-11-02 21:23:15,257 INFO    HandlerThread:13463 [system_monitor.py:probe():229] Finished publishing system info
+2023-11-02 21:23:15,260 DEBUG   SenderThread:13463 [sender.py:send():380] send: files
+2023-11-02 21:23:15,260 INFO    SenderThread:13463 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-11-02 21:23:15,266 DEBUG   HandlerThread:13463 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-02 21:23:15,266 DEBUG   SenderThread:13463 [sender.py:send_request():407] send_request: stop_status
+2023-11-02 21:23:15,267 DEBUG   HandlerThread:13463 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-02 21:23:15,443 DEBUG   SenderThread:13463 [sender.py:send():380] send: telemetry
+2023-11-02 21:23:15,443 DEBUG   SenderThread:13463 [sender.py:send():380] send: config
+2023-11-02 21:23:15,443 DEBUG   SenderThread:13463 [sender.py:send():380] send: metric
+2023-11-02 21:23:15,443 DEBUG   SenderThread:13463 [sender.py:send():380] send: telemetry
+2023-11-02 21:23:15,443 DEBUG   SenderThread:13463 [sender.py:send():380] send: metric
+2023-11-02 21:23:15,443 WARNING SenderThread:13463 [sender.py:send_metric():1329] Seen metric with glob (shouldn't happen)
+2023-11-02 21:23:15,497 INFO    Thread-12 :13463 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_212313-aek1px31/files/conda-environment.yaml
+2023-11-02 21:23:15,497 INFO    Thread-12 :13463 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_212313-aek1px31/files/output.log
+2023-11-02 21:23:15,497 INFO    Thread-12 :13463 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_212313-aek1px31/files/wandb-metadata.json
+2023-11-02 21:23:15,797 INFO    wandb-upload_0:13463 [upload_job.py:push():131] Uploaded file /var/folders/d_/sps2vdyj681gtpbdtmdff5700000gp/T/tmp4k98kuf9wandb/fr9p7njv-wandb-metadata.json
+2023-11-02 21:23:17,505 INFO    Thread-12 :13463 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_212313-aek1px31/files/output.log
+2023-11-02 21:23:17,605 INFO    cpu       :13463 [interfaces.py:monitor():140] Process cpu has exited.
+2023-11-02 21:23:17,606 DEBUG   SystemMonitor:13463 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-11-02 21:23:17,607 DEBUG   SystemMonitor:13463 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-11-02 21:23:17,607 DEBUG   SystemMonitor:13463 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-11-02 21:23:17,609 DEBUG   SenderThread:13463 [sender.py:send():380] send: telemetry
+2023-11-02 21:23:17,609 DEBUG   SenderThread:13463 [sender.py:send():380] send: stats
+2023-11-02 21:23:18,612 INFO    MainThread:13463 [internal.py:handle_exit():76] Internal process exited
+2023-11-02 21:23:18,614 DEBUG   HandlerThread:13463 [handler.py:handle_request():146] handle_request: status_report

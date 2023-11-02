@@ -1,0 +1,183 @@
+2023-11-02 21:13:06,449 INFO    StreamThr :11565 [internal.py:wandb_internal():86] W&B internal server running at pid: 11565, started at: 2023-11-02 21:13:06.449049
+2023-11-02 21:13:06,450 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: status
+2023-11-02 21:13:06,454 INFO    WriterThread:11565 [datastore.py:open_for_write():85] open: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/run-0zbh7sbu.wandb
+2023-11-02 21:13:06,454 DEBUG   SenderThread:11565 [sender.py:send():380] send: header
+2023-11-02 21:13:06,494 DEBUG   SenderThread:11565 [sender.py:send():380] send: run
+2023-11-02 21:13:06,926 INFO    SenderThread:11565 [dir_watcher.py:__init__():211] watching files in: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files
+2023-11-02 21:13:06,926 INFO    SenderThread:11565 [sender.py:_start_run_threads():1122] run started: 0zbh7sbu with start time 1698959586.449175
+2023-11-02 21:13:06,936 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: check_version
+2023-11-02 21:13:06,936 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: check_version
+2023-11-02 21:13:07,017 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: run_start
+2023-11-02 21:13:07,026 DEBUG   HandlerThread:11565 [system_info.py:__init__():32] System info init
+2023-11-02 21:13:07,026 DEBUG   HandlerThread:11565 [system_info.py:__init__():47] System info init done
+2023-11-02 21:13:07,026 INFO    HandlerThread:11565 [system_monitor.py:start():194] Starting system monitor
+2023-11-02 21:13:07,026 INFO    SystemMonitor:11565 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-11-02 21:13:07,027 INFO    HandlerThread:11565 [system_monitor.py:probe():214] Collecting system info
+2023-11-02 21:13:07,027 INFO    SystemMonitor:11565 [interfaces.py:start():190] Started cpu monitoring
+2023-11-02 21:13:07,027 DEBUG   HandlerThread:11565 [system_info.py:probe():196] Probing system
+2023-11-02 21:13:07,027 INFO    SystemMonitor:11565 [interfaces.py:start():190] Started disk monitoring
+2023-11-02 21:13:07,030 INFO    SystemMonitor:11565 [interfaces.py:start():190] Started gpuapple monitoring
+2023-11-02 21:13:07,032 INFO    SystemMonitor:11565 [interfaces.py:start():190] Started memory monitoring
+2023-11-02 21:13:07,033 INFO    SystemMonitor:11565 [interfaces.py:start():190] Started network monitoring
+2023-11-02 21:13:07,037 DEBUG   HandlerThread:11565 [system_info.py:_probe_git():181] Probing git
+2023-11-02 21:13:07,065 DEBUG   HandlerThread:11565 [system_info.py:_probe_git():189] Probing git done
+2023-11-02 21:13:07,066 DEBUG   HandlerThread:11565 [system_info.py:probe():244] Probing system done
+2023-11-02 21:13:07,066 DEBUG   HandlerThread:11565 [system_monitor.py:probe():223] {'os': 'macOS-14.1-arm64-arm-64bit', 'python': '3.11.5', 'heartbeatAt': '2023-11-02T21:13:07.029101', 'startedAt': '2023-11-02T21:13:06.433608', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '<python with no main file>', 'codePathLocal': None, 'git': {'remote': 'https://github.com/brianliu03/sentiment-analysis.git', 'commit': '280571d7d1f8fdfcb2e36737d4663ca459d8fc67'}, 'email': '64610885+brianliu03@users.noreply.github.com', 'root': '/Users/brianliu03/Documents/Projects/sentiment-analysis', 'host': 'Brians-MacBook-Pro.local', 'username': 'brianliu03', 'executable': '/Users/brianliu03/miniconda3/envs/mlenv/bin/python3', 'cpu_count': 8, 'cpu_count_logical': 8, 'disk': {'/': {'total': 460.4317207336426, 'used': 160.7514305114746}}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2023-11-02 21:13:07,066 INFO    HandlerThread:11565 [system_monitor.py:probe():224] Finished collecting system info
+2023-11-02 21:13:07,066 INFO    HandlerThread:11565 [system_monitor.py:probe():227] Publishing system info
+2023-11-02 21:13:07,066 DEBUG   HandlerThread:11565 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-02 21:13:07,066 DEBUG   HandlerThread:11565 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-02 21:13:07,066 DEBUG   HandlerThread:11565 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-11-02 21:13:07,932 INFO    Thread-12 :11565 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/requirements.txt
+2023-11-02 21:13:07,932 INFO    Thread-12 :11565 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/conda-environment.yaml
+2023-11-02 21:13:08,578 DEBUG   HandlerThread:11565 [system_info.py:_save_conda():87] Saving conda packages done
+2023-11-02 21:13:08,579 INFO    HandlerThread:11565 [system_monitor.py:probe():229] Finished publishing system info
+2023-11-02 21:13:08,582 DEBUG   SenderThread:11565 [sender.py:send():380] send: files
+2023-11-02 21:13:08,582 INFO    SenderThread:11565 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-11-02 21:13:08,585 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-02 21:13:08,586 DEBUG   SenderThread:11565 [sender.py:send():380] send: telemetry
+2023-11-02 21:13:08,586 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-02 21:13:08,586 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: stop_status
+2023-11-02 21:13:08,937 INFO    Thread-12 :11565 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/conda-environment.yaml
+2023-11-02 21:13:08,937 INFO    Thread-12 :11565 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/wandb-metadata.json
+2023-11-02 21:13:08,937 INFO    Thread-12 :11565 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/output.log
+2023-11-02 21:13:09,229 INFO    wandb-upload_0:11565 [upload_job.py:push():131] Uploaded file /var/folders/d_/sps2vdyj681gtpbdtmdff5700000gp/T/tmp7xtmuy6hwandb/6dd2cer8-wandb-metadata.json
+2023-11-02 21:13:10,948 INFO    Thread-12 :11565 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/output.log
+2023-11-02 21:13:11,862 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 21:13:16,883 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 21:13:21,904 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 21:13:23,593 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-02 21:13:23,594 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-02 21:13:23,594 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: stop_status
+2023-11-02 21:13:27,800 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 21:13:32,816 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 21:13:37,843 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 21:13:38,083 INFO    Thread-12 :11565 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/config.yaml
+2023-11-02 21:13:38,596 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-02 21:13:38,597 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-02 21:13:38,598 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: stop_status
+2023-11-02 21:13:43,809 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 21:13:48,831 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 21:13:53,601 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-02 21:13:53,602 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-02 21:13:53,602 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: stop_status
+2023-11-02 21:13:54,797 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 21:13:59,815 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 21:14:04,830 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 21:14:07,039 DEBUG   SystemMonitor:11565 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-11-02 21:14:07,044 DEBUG   SenderThread:11565 [sender.py:send():380] send: telemetry
+2023-11-02 21:14:07,045 DEBUG   SenderThread:11565 [sender.py:send():380] send: stats
+2023-11-02 21:14:08,606 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-02 21:14:08,607 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-02 21:14:08,608 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: stop_status
+2023-11-02 21:14:09,844 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 21:14:10,221 INFO    Thread-12 :11565 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/config.yaml
+2023-11-02 21:14:15,033 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 21:14:20,052 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 21:14:23,515 DEBUG   SenderThread:11565 [sender.py:send():380] send: exit
+2023-11-02 21:14:23,516 INFO    SenderThread:11565 [sender.py:send_exit():585] handling exit code: 1
+2023-11-02 21:14:23,516 INFO    SenderThread:11565 [sender.py:send_exit():587] handling runtime: 76
+2023-11-02 21:14:23,518 INFO    SenderThread:11565 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-02 21:14:23,519 INFO    SenderThread:11565 [sender.py:send_exit():593] send defer
+2023-11-02 21:14:23,520 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 21:14:23,520 INFO    HandlerThread:11565 [handler.py:handle_request_defer():172] handle defer: 0
+2023-11-02 21:14:23,520 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: defer
+2023-11-02 21:14:23,520 INFO    SenderThread:11565 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-11-02 21:14:23,521 INFO    SenderThread:11565 [sender.py:transition_state():613] send defer: 1
+2023-11-02 21:14:23,521 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 21:14:23,521 INFO    HandlerThread:11565 [handler.py:handle_request_defer():172] handle defer: 1
+2023-11-02 21:14:23,521 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: defer
+2023-11-02 21:14:23,521 INFO    SenderThread:11565 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-11-02 21:14:23,521 INFO    SenderThread:11565 [sender.py:transition_state():613] send defer: 2
+2023-11-02 21:14:23,521 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 21:14:23,521 INFO    HandlerThread:11565 [handler.py:handle_request_defer():172] handle defer: 2
+2023-11-02 21:14:23,521 INFO    HandlerThread:11565 [system_monitor.py:finish():203] Stopping system monitor
+2023-11-02 21:14:23,521 DEBUG   SystemMonitor:11565 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-11-02 21:14:23,522 DEBUG   SystemMonitor:11565 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-11-02 21:14:23,522 INFO    HandlerThread:11565 [interfaces.py:finish():202] Joined cpu monitor
+2023-11-02 21:14:23,523 INFO    HandlerThread:11565 [interfaces.py:finish():202] Joined disk monitor
+2023-11-02 21:14:23,523 INFO    HandlerThread:11565 [interfaces.py:finish():202] Joined gpuapple monitor
+2023-11-02 21:14:23,523 INFO    HandlerThread:11565 [interfaces.py:finish():202] Joined memory monitor
+2023-11-02 21:14:23,524 INFO    HandlerThread:11565 [interfaces.py:finish():202] Joined network monitor
+2023-11-02 21:14:23,524 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: defer
+2023-11-02 21:14:23,524 INFO    SenderThread:11565 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-11-02 21:14:23,524 INFO    SenderThread:11565 [sender.py:transition_state():613] send defer: 3
+2023-11-02 21:14:23,524 DEBUG   SenderThread:11565 [sender.py:send():380] send: stats
+2023-11-02 21:14:23,525 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 21:14:23,525 INFO    HandlerThread:11565 [handler.py:handle_request_defer():172] handle defer: 3
+2023-11-02 21:14:23,525 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: defer
+2023-11-02 21:14:23,525 INFO    SenderThread:11565 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-11-02 21:14:23,525 INFO    SenderThread:11565 [sender.py:transition_state():613] send defer: 4
+2023-11-02 21:14:23,525 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 21:14:23,525 INFO    HandlerThread:11565 [handler.py:handle_request_defer():172] handle defer: 4
+2023-11-02 21:14:23,525 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: defer
+2023-11-02 21:14:23,525 INFO    SenderThread:11565 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-11-02 21:14:23,525 INFO    SenderThread:11565 [sender.py:transition_state():613] send defer: 5
+2023-11-02 21:14:23,526 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 21:14:23,526 INFO    HandlerThread:11565 [handler.py:handle_request_defer():172] handle defer: 5
+2023-11-02 21:14:23,526 DEBUG   SenderThread:11565 [sender.py:send():380] send: summary
+2023-11-02 21:14:23,537 INFO    SenderThread:11565 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-02 21:14:23,538 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: defer
+2023-11-02 21:14:23,538 INFO    SenderThread:11565 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-11-02 21:14:23,538 INFO    SenderThread:11565 [sender.py:transition_state():613] send defer: 6
+2023-11-02 21:14:23,538 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 21:14:23,538 INFO    HandlerThread:11565 [handler.py:handle_request_defer():172] handle defer: 6
+2023-11-02 21:14:23,538 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: defer
+2023-11-02 21:14:23,538 INFO    SenderThread:11565 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-11-02 21:14:23,538 INFO    SenderThread:11565 [sender.py:transition_state():613] send defer: 7
+2023-11-02 21:14:23,539 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: status_report
+2023-11-02 21:14:23,539 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 21:14:23,539 INFO    HandlerThread:11565 [handler.py:handle_request_defer():172] handle defer: 7
+2023-11-02 21:14:23,539 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: defer
+2023-11-02 21:14:23,539 INFO    SenderThread:11565 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-11-02 21:14:24,280 INFO    Thread-12 :11565 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/wandb-summary.json
+2023-11-02 21:14:24,517 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-02 21:14:27,027 INFO    SenderThread:11565 [sender.py:transition_state():613] send defer: 8
+2023-11-02 21:14:27,027 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: poll_exit
+2023-11-02 21:14:27,027 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 21:14:27,028 INFO    HandlerThread:11565 [handler.py:handle_request_defer():172] handle defer: 8
+2023-11-02 21:14:27,028 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: defer
+2023-11-02 21:14:27,028 INFO    SenderThread:11565 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-11-02 21:14:27,028 INFO    SenderThread:11565 [job_builder.py:build():281] Attempting to build job artifact
+2023-11-02 21:14:27,029 INFO    SenderThread:11565 [job_builder.py:_get_source_type():393] is repo sourced job
+2023-11-02 21:14:27,029 INFO    SenderThread:11565 [sender.py:transition_state():613] send defer: 9
+2023-11-02 21:14:27,029 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 21:14:27,029 INFO    HandlerThread:11565 [handler.py:handle_request_defer():172] handle defer: 9
+2023-11-02 21:14:27,030 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: defer
+2023-11-02 21:14:27,030 INFO    SenderThread:11565 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-11-02 21:14:27,030 INFO    SenderThread:11565 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-11-02 21:14:27,293 INFO    SenderThread:11565 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/output.log
+2023-11-02 21:14:27,294 INFO    SenderThread:11565 [dir_watcher.py:finish():388] scan: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files
+2023-11-02 21:14:27,294 INFO    SenderThread:11565 [dir_watcher.py:finish():402] scan save: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/requirements.txt requirements.txt
+2023-11-02 21:14:27,295 INFO    SenderThread:11565 [dir_watcher.py:finish():402] scan save: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/output.log output.log
+2023-11-02 21:14:27,297 INFO    SenderThread:11565 [dir_watcher.py:finish():402] scan save: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/config.yaml config.yaml
+2023-11-02 21:14:27,299 INFO    SenderThread:11565 [dir_watcher.py:finish():402] scan save: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/wandb-summary.json wandb-summary.json
+2023-11-02 21:14:27,301 INFO    SenderThread:11565 [dir_watcher.py:finish():402] scan save: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/conda-environment.yaml conda-environment.yaml
+2023-11-02 21:14:27,301 INFO    SenderThread:11565 [dir_watcher.py:finish():402] scan save: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/wandb-metadata.json wandb-metadata.json
+2023-11-02 21:14:27,301 INFO    SenderThread:11565 [sender.py:transition_state():613] send defer: 10
+2023-11-02 21:14:27,303 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 21:14:27,304 INFO    HandlerThread:11565 [handler.py:handle_request_defer():172] handle defer: 10
+2023-11-02 21:14:27,305 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: defer
+2023-11-02 21:14:27,305 INFO    SenderThread:11565 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-11-02 21:14:27,305 INFO    SenderThread:11565 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-02 21:14:27,709 INFO    wandb-upload_1:11565 [upload_job.py:push():131] Uploaded file /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/output.log
+2023-11-02 21:14:27,747 INFO    wandb-upload_4:11565 [upload_job.py:push():131] Uploaded file /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/conda-environment.yaml
+2023-11-02 21:14:27,751 INFO    wandb-upload_3:11565 [upload_job.py:push():131] Uploaded file /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/wandb-summary.json
+2023-11-02 21:14:27,751 INFO    wandb-upload_0:11565 [upload_job.py:push():131] Uploaded file /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/requirements.txt
+2023-11-02 21:14:27,767 WARNING StreamThr :11565 [internal.py:is_dead():414] Internal process exiting, parent pid 11542 disappeared
+2023-11-02 21:14:27,767 ERROR   StreamThr :11565 [internal.py:wandb_internal():152] Internal process shutdown.
+2023-11-02 21:14:27,784 INFO    wandb-upload_2:11565 [upload_job.py:push():131] Uploaded file /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/files/config.yaml
+2023-11-02 21:14:27,990 INFO    Thread-11 (_thread_body):11565 [sender.py:transition_state():613] send defer: 11
+2023-11-02 21:14:27,991 DEBUG   HandlerThread:11565 [handler.py:handle_request():146] handle_request: defer
+2023-11-02 21:14:27,991 INFO    HandlerThread:11565 [handler.py:handle_request_defer():172] handle defer: 11
+2023-11-02 21:14:27,991 INFO    HandlerThread:11565 [handler.py:finish():866] shutting down handler
+2023-11-02 21:14:27,992 INFO    WriterThread:11565 [datastore.py:close():294] close: /Users/brianliu03/Documents/Projects/sentiment-analysis/wandb/run-20231102_211306-0zbh7sbu/run-0zbh7sbu.wandb
+2023-11-02 21:14:27,992 DEBUG   SenderThread:11565 [sender.py:send_request():407] send_request: defer
+2023-11-02 21:14:27,992 INFO    SenderThread:11565 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-11-02 21:14:27,992 INFO    SenderThread:11565 [file_pusher.py:join():181] waiting for file pusher
+2023-11-02 21:14:27,992 INFO    SenderThread:11565 [sender.py:transition_state():613] send defer: 12
+2023-11-02 21:14:27,992 INFO    SenderThread:11565 [sender.py:finish():1534] shutting down sender
+2023-11-02 21:14:27,992 INFO    SenderThread:11565 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-02 21:14:27,992 INFO    SenderThread:11565 [file_pusher.py:join():181] waiting for file pusher
+2023-11-02 21:14:27,994 INFO    SenderThread:11565 [file_stream.py:finish():595] file stream finish called
+2023-11-02 21:14:28,514 INFO    SenderThread:11565 [file_stream.py:finish():599] file stream finish is done
