@@ -12,7 +12,7 @@ wandb.init(
 
     # set the wandb project where this run will be logged
     project="sentiment-analysis",
-    name="bach1.0"
+    name="bach1.0",
 
     # track hyperparameters and run metadata
     config={
@@ -28,8 +28,8 @@ wandb.init(
 
 # python3 train.py -d sst2 -t 10 -ts 5 -tn sentence -o sst2
 dataset_name = "sst2"
-train_samples = 10000
-test_samples = 5000
+train_samples = 67000
+test_samples = 1820
 text_name = "sentence"
 output_dir = "sst2"
 
@@ -101,12 +101,6 @@ trainer = Trainer(
 
 
 trainer.train()
-trainer.evaluate()
-
-# save model and compute_metrics f1 and accuracy score
-trainer.save_model(output_dir)
-evaluate.save("accuracy", "accuracy")
-evaluate.save("f1", "f1")
 
 # use weights and biases
 # print log file, nicer way is weights and biases, or tensorboard
