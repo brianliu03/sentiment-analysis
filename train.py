@@ -1,10 +1,6 @@
 import torch, argparse
 from datasets import load_dataset
 from transformers import AutoTokenizer, DefaultDataCollator, AutoModelForSequenceClassification, TrainingArguments, Trainer
-# import torch.multiprocessing as mp
-# from torch.utils.data.distributed import DistributedSampler
-# from torch.nn.parallel import DistributedDataParallel as DDP
-# from torch.distributed import init_process_group, destroy_process_group
 import numpy as np
 import evaluate
 import os
@@ -101,3 +97,7 @@ trainer.evaluate()
 trainer.save_model(args.output_dir)
 evaluate.save("accuracy", "accuracy")
 evaluate.save("f1", "f1")
+
+# use weights and biases
+# print log file, nicer way is weights and biases, or tensorboard
+# logging errors
