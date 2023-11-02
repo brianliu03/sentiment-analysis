@@ -1,37 +1,47 @@
-import torch, argparse
+import torch, evaluate, wandb
+import numpy as np
+
 from datasets import load_dataset
 from transformers import AutoTokenizer, DefaultDataCollator, AutoModelForSequenceClassification, TrainingArguments, Trainer
-import numpy as np
-import evaluate
-import os
 
+
+
+
+# start a new wandb run to track this script
+wandb.init(
+
+    # set the wandb project where this run will be logged
+    project="sentiment-analysis",
+    name="bach1.0"
+
+    # track hyperparameters and run metadata
+    config={
+    "learning_rate": 2e-5,
+    "architecture": "Transformer",
+    "dataset": "sst2",
+    "epochs": 2,
+    }
+)
 
 
 
 
 # python3 train.py -d sst2 -t 10 -ts 5 -tn sentence -o sst2
-# define command line arguments
-parser = argparse.ArgumentParser()
-parser.add_argument("-d", "--dataset", type=str, default="imdb",
-                    help="Path to repository of the dataset to use.")
-parser.add_argument("-t", "--train_samples", type=int, default=3000,
-                    help="Number of training samples to use.")
-parser.add_argument("-ts", "--test_samples", type=int, default=300,
-                    help="Number of testing samples to use.")
-parser.add_argument("-tn", "--text_name", type=str, default="text",
-                    help="Name of the text column in the dataset.")
-parser.add_argument("-o", "--output_dir", type=str, default="default",
-                    help="Path to output directory.")
-args = parser.parse_args()
+dataset_name = "sst2"
+train_samples = 10000
+test_samples = 5000
+text_name = "sentence"
+output_dir = "sst2"
+
 
 
 
 
 
 # load dataset
-dataset = load_dataset(args.dataset)
-small_train_dataset = dataset["train"].shuffle(seed=42).select(range(args.train_samples))
-small_test_dataset = dataset["test"].shuffle(seed=42).select(range(args.test_samples))
+dataset = load_dataset(dataset_name)
+small_train_dataset = dataset["train"].shuffle(seed=45).select(range(train_samples))
+small_test_dataset = dataset["test"].shuffle(seed=45).select(range(test_samples))
 
 # loading pretrained DistilBERT tokenizer
 # tokenization - breaking text into smaller units (tokens)
@@ -39,7 +49,7 @@ tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
 
 # prepare text inputs for model using map method
 def preprocess(examples): 
-    return tokenizer(examples[args.text_name], truncation=True, padding=True)
+    return tokenizer(examples[text_name], truncation=True, padding=True)
 
 tokenized_train = small_train_dataset.map(preprocess, batched=True)
 tokenized_test = small_test_dataset.map(preprocess, batched=True)
@@ -69,7 +79,7 @@ def compute_metrics(eval_pred):
 
 
 training_args = TrainingArguments(
-    output_dir = args.output_dir,
+    output_dir = output_dir,
     learning_rate = 2e-5,
     per_device_train_batch_size = 16,
     per_device_eval_batch_size = 16,
@@ -94,7 +104,7 @@ trainer.train()
 trainer.evaluate()
 
 # save model and compute_metrics f1 and accuracy score
-trainer.save_model(args.output_dir)
+trainer.save_model(output_dir)
 evaluate.save("accuracy", "accuracy")
 evaluate.save("f1", "f1")
 
