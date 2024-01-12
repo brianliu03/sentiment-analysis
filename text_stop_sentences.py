@@ -14,9 +14,6 @@ def text_stop_sentences():
     # stop words for filtering
     stopwords = set(nltk.corpus.stopwords.words('english'))
 
-    # load different texts
-    # text = open('text_stimuli/01_1.txt').read()[58:]
-    # read for all files inside of text_stimuli, no need to [58:] for all
     text = ''
     for f in sorted(listdir('text_stimuli')):
         if isfile(join('text_stimuli', f)):
@@ -33,7 +30,9 @@ def text_stop_sentences():
 
     predictions_stop_sentences = classifier(text_stop_sentences)
 
-    df_stop_sentences = pd.DataFrame(predictions_stop_sentences).stack().apply(pd.Series).reset_index(names=['sentence', 'emotion'])
-    df_stop_sentences = df_stop_sentences.pivot_table(columns='label', index='sentence', values='score')
+    df_stop_sentences = pd.DataFrame(predictions_stop_sentences).stack().apply(pd.Series).reset_index(names=['index', 'emotion'])
+    df_stop_sentences = df_stop_sentences.pivot_table(columns='label', index='index', values='score')
+
+    df_stop_sentences['sentence'] = df_stop_sentences.index.map(lambda x: text_stop_sentences[x])
 
     return df_stop_sentences
